@@ -14,8 +14,45 @@
         <view contentMode="scaleToFill" id="Q2x-wl-clQ">
             <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e6v-ch-Cae">
+                    <rect key="frame" x="0.0" y="0.0" width="640" height="568"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8Uf-H4-6eT" userLabel="first">
+                            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                            <animations/>
+                            <color key="backgroundColor" red="0.99072283319999999" green="0.91243776060000004" blue="0.95973220810000004" alpha="1" colorSpace="calibratedRGB"/>
+                        </view>
+                        <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NYx-Ys-JJS" userLabel="second">
+                            <rect key="frame" x="320" y="0.0" width="320" height="568"/>
+                            <animations/>
+                            <color key="backgroundColor" red="0.94602117770000005" green="1" blue="0.63736948630000001" alpha="1" colorSpace="calibratedRGB"/>
+                        </view>
+                    </subviews>
+                    <animations/>
+                    <constraints>
+                        <constraint firstItem="NYx-Ys-JJS" firstAttribute="width" secondItem="8Uf-H4-6eT" secondAttribute="width" id="0tQ-MW-BV4"/>
+                        <constraint firstItem="NYx-Ys-JJS" firstAttribute="top" secondItem="e6v-ch-Cae" secondAttribute="top" id="8qs-D2-Jaj"/>
+                        <constraint firstItem="NYx-Ys-JJS" firstAttribute="leading" secondItem="8Uf-H4-6eT" secondAttribute="trailing" id="LXN-T1-bD1"/>
+                        <constraint firstItem="NYx-Ys-JJS" firstAttribute="height" secondItem="8Uf-H4-6eT" secondAttribute="height" id="YbZ-Fu-U09"/>
+                        <constraint firstAttribute="bottom" secondItem="NYx-Ys-JJS" secondAttribute="bottom" id="d71-93-b9x"/>
+                        <constraint firstItem="8Uf-H4-6eT" firstAttribute="height" secondItem="e6v-ch-Cae" secondAttribute="height" id="fL9-2L-3xc"/>
+                        <constraint firstAttribute="bottom" secondItem="8Uf-H4-6eT" secondAttribute="bottom" id="gNt-In-zWd"/>
+                        <constraint firstItem="8Uf-H4-6eT" firstAttribute="top" secondItem="e6v-ch-Cae" secondAttribute="top" id="k1i-oF-f8F"/>
+                        <constraint firstAttribute="trailing" secondItem="NYx-Ys-JJS" secondAttribute="trailing" id="srd-D6-5p1"/>
+                        <constraint firstItem="8Uf-H4-6eT" firstAttribute="leading" secondItem="e6v-ch-Cae" secondAttribute="leading" id="wEP-qf-0uw"/>
+                        <constraint firstItem="8Uf-H4-6eT" firstAttribute="width" secondItem="e6v-ch-Cae" secondAttribute="width" id="wW1-zs-lJj"/>
+                    </constraints>
+                </scrollView>
+            </subviews>
             <animations/>
             <color key="backgroundColor" red="0.76965082259999995" green="1" blue="0.96411158549999998" alpha="1" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="e6v-ch-Cae" secondAttribute="bottom" id="308-SX-W8h"/>
+                <constraint firstItem="e6v-ch-Cae" firstAttribute="top" secondItem="Q2x-wl-clQ" secondAttribute="top" id="GvM-zH-F38"/>
+                <constraint firstItem="e6v-ch-Cae" firstAttribute="leading" secondItem="Q2x-wl-clQ" secondAttribute="leading" id="a5Q-M9-dvG"/>
+                <constraint firstAttribute="trailing" secondItem="e6v-ch-Cae" secondAttribute="trailing" constant="-320" id="xjw-ps-8gA"/>
+            </constraints>
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
         </view>
     </objects>
