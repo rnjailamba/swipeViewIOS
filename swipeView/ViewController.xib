@@ -7,6 +7,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ViewController">
             <connections>
+                <outlet property="scrollView" destination="e6v-ch-Cae" id="cRu-Oi-woN"/>
                 <outlet property="view" destination="Q2x-wl-clQ" id="mDh-ls-Mnc"/>
             </connections>
         </placeholder>
@@ -15,8 +16,8 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
-                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e6v-ch-Cae">
-                    <rect key="frame" x="0.0" y="0.0" width="640" height="568"/>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" pagingEnabled="YES" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e6v-ch-Cae">
+                    <rect key="frame" x="0.0" y="40" width="640" height="568"/>
                     <subviews>
                         <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8Uf-H4-6eT" userLabel="first">
                             <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
@@ -44,13 +45,47 @@
                         <constraint firstItem="8Uf-H4-6eT" firstAttribute="width" secondItem="e6v-ch-Cae" secondAttribute="width" id="wW1-zs-lJj"/>
                     </constraints>
                 </scrollView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ccw-R6-9OX">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="40"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="owG-OC-djb" userLabel="firstSub">
+                            <rect key="frame" x="0.0" y="0.0" width="160" height="40"/>
+                            <animations/>
+                            <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bUC-1S-94o" userLabel="secondSub">
+                            <rect key="frame" x="160" y="0.0" width="160" height="40"/>
+                            <animations/>
+                            <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                        </view>
+                    </subviews>
+                    <animations/>
+                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstItem="bUC-1S-94o" firstAttribute="top" secondItem="Ccw-R6-9OX" secondAttribute="top" id="0oG-kx-oOG"/>
+                        <constraint firstItem="owG-OC-djb" firstAttribute="leading" secondItem="Ccw-R6-9OX" secondAttribute="leading" id="65q-I7-kWK"/>
+                        <constraint firstItem="owG-OC-djb" firstAttribute="top" secondItem="Ccw-R6-9OX" secondAttribute="top" id="73N-Zi-PQG"/>
+                        <constraint firstAttribute="trailing" secondItem="bUC-1S-94o" secondAttribute="trailing" id="Umc-wU-RWp"/>
+                        <constraint firstItem="owG-OC-djb" firstAttribute="width" secondItem="bUC-1S-94o" secondAttribute="width" id="YTD-j8-6xS"/>
+                        <constraint firstItem="bUC-1S-94o" firstAttribute="leading" secondItem="owG-OC-djb" secondAttribute="trailing" id="dhT-3q-79f"/>
+                        <constraint firstItem="bUC-1S-94o" firstAttribute="leading" secondItem="owG-OC-djb" secondAttribute="trailing" id="fPb-mw-sdI"/>
+                        <constraint firstAttribute="bottom" secondItem="bUC-1S-94o" secondAttribute="bottom" id="hGo-g3-xYN"/>
+                        <constraint firstItem="owG-OC-djb" firstAttribute="height" secondItem="bUC-1S-94o" secondAttribute="height" id="mu3-Pf-3cY"/>
+                        <constraint firstAttribute="bottom" secondItem="owG-OC-djb" secondAttribute="bottom" id="qAj-g8-67B"/>
+                        <constraint firstItem="bUC-1S-94o" firstAttribute="leading" secondItem="owG-OC-djb" secondAttribute="trailing" id="uFi-jF-1hY"/>
+                    </constraints>
+                </view>
             </subviews>
             <animations/>
             <color key="backgroundColor" red="0.76965082259999995" green="1" blue="0.96411158549999998" alpha="1" colorSpace="calibratedRGB"/>
             <constraints>
                 <constraint firstAttribute="bottom" secondItem="e6v-ch-Cae" secondAttribute="bottom" id="308-SX-W8h"/>
-                <constraint firstItem="e6v-ch-Cae" firstAttribute="top" secondItem="Q2x-wl-clQ" secondAttribute="top" id="GvM-zH-F38"/>
+                <constraint firstItem="Ccw-R6-9OX" firstAttribute="leading" secondItem="Q2x-wl-clQ" secondAttribute="leading" id="6SO-4E-ITS"/>
+                <constraint firstItem="e6v-ch-Cae" firstAttribute="top" secondItem="Q2x-wl-clQ" secondAttribute="top" constant="40" id="GvM-zH-F38"/>
+                <constraint firstItem="e6v-ch-Cae" firstAttribute="top" secondItem="Ccw-R6-9OX" secondAttribute="bottom" id="VtO-er-GlB"/>
                 <constraint firstItem="e6v-ch-Cae" firstAttribute="leading" secondItem="Q2x-wl-clQ" secondAttribute="leading" id="a5Q-M9-dvG"/>
+                <constraint firstAttribute="trailing" secondItem="Ccw-R6-9OX" secondAttribute="trailing" id="jHA-9f-mKj"/>
+                <constraint firstItem="Ccw-R6-9OX" firstAttribute="top" secondItem="Q2x-wl-clQ" secondAttribute="top" id="vgz-uD-x3S"/>
                 <constraint firstAttribute="trailing" secondItem="e6v-ch-Cae" secondAttribute="trailing" constant="-320" id="xjw-ps-8gA"/>
             </constraints>
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>

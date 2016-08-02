@@ -9,6 +9,7 @@
 #import "ViewController.h"
 
 @interface ViewController ()
+@property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
 
 @end
 
@@ -17,6 +18,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    _scrollView.delegate = self;
+
 }
 
 - (void)didReceiveMemoryWarning {
@@ -24,4 +27,10 @@
     // Dispose of any resources that can be recreated.
 }
 
+-(void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView
+{
+    int indexOfPage = scrollView.contentOffset.x / scrollView.frame.size.width;
+    NSLog(@"page %d",indexOfPage );
+    //your stuff with index
+}
 @end
