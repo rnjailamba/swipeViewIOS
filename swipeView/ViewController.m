@@ -10,6 +10,12 @@
 
 @interface ViewController ()
 @property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
+@property (weak, nonatomic) IBOutlet UIButton *firstButton;
+@property (weak, nonatomic) IBOutlet UIButton *secondButton;
+@property (weak, nonatomic) IBOutlet UIButton *thirdButton;
+- (IBAction)firstButtonAction:(id)sender;
+- (IBAction)secondButtonAction:(id)sender;
+- (IBAction)thirdButtonAction:(id)sender;
 
 @end
 
@@ -19,7 +25,12 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     _scrollView.delegate = self;
+    [[UIApplication sharedApplication] setStatusBarHidden:YES
+                                            withAnimation:UIStatusBarAnimationFade];
 
+}
+- (BOOL)prefersStatusBarHidden {
+    return YES;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -32,5 +43,25 @@
     int indexOfPage = scrollView.contentOffset.x / scrollView.frame.size.width;
     NSLog(@"page %d",indexOfPage );
     //your stuff with index
+}
+- (IBAction)firstButtonAction:(id)sender {
+    CGRect frame = self.scrollView.frame;
+    frame.origin.x = frame.size.width * 0;
+    frame.origin.y = 0;
+    [self.scrollView scrollRectToVisible:frame animated:YES];
+}
+
+- (IBAction)secondButtonAction:(id)sender {
+    CGRect frame = self.scrollView.frame;
+    frame.origin.x = frame.size.width * 1;
+    frame.origin.y = 0;
+    [self.scrollView scrollRectToVisible:frame animated:YES];
+}
+
+- (IBAction)thirdButtonAction:(id)sender {
+    CGRect frame = self.scrollView.frame;
+    frame.origin.x = frame.size.width * 2;
+    frame.origin.y = 0;
+    [self.scrollView scrollRectToVisible:frame animated:YES];
 }
 @end
