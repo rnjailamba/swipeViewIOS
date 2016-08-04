@@ -1,5 +1,5 @@
 # swipeViewIOS
-![image](http://i.imgur.com/bFattPm.gif)
+![image](http://i.imgur.com/7gPeBFb.gif)
 <p>Inspired by <a href="https://github.com/nicklockwood/SwipeView/tree/master/SwipeView">https://github.com/nicklockwood/SwipeView/tree/master/SwipeView</a></p>
 
 <p>correct method - <a href="http://stackoverflow.com/questions/26959496/how-to-create-dynamic-sized-paged-horizontal-uiscrollview-using-autolayout-in-xc">http://stackoverflow.com/questions/26959496/how-to-create-dynamic-sized-paged-horizontal-uiscrollview-using-autolayout-in-xc</a> <br>
